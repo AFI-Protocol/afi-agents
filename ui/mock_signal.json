@@ -1,0 +1,8 @@
+{
+  "id": "demo-001",
+  "timestamp": "2025-06-26T00:00:00Z",
+  "source": "BTC/USDT",
+  "signalType": "alpha",
+  "confidence": 62.3,
+  "message": "Spike in open interest and positive funding rate detected."
+}
