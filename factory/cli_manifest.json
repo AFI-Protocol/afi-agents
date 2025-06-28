@@ -1,0 +1,31 @@
+{
+  "commands": {
+    "validate-codex": {
+      "description": "Validate a codex file",
+      "args": [
+        "<file>"
+      ],
+      "source": "@afi-config/cli_utils/codex_validator.ts"
+    },
+    "simulate-signal": {
+      "description": "Emit mock signal",
+      "args": [],
+      "source": "@afi-infra/cli_templates/signal_simulator.ts"
+    },
+    "invoke-validator": {
+      "description": "Run PoIValidator",
+      "args": [],
+      "source": "@afi-core/cli_hooks/validator_invoker.ts"
+    },
+    "invoke-mentor": {
+      "description": "Run MentorRegistry",
+      "args": [],
+      "source": "@afi-core/cli_hooks/validator_invoker.ts"
+    },
+    "run-local-deploy": {
+      "description": "Execute bash deploy script",
+      "args": [],
+      "source": "@afi-ops/scripts/deploy_local.sh"
+    }
+  }
+}

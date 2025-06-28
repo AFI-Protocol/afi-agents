@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@afi-config/*": ["../afi-config/*"],
+      "@afi-core/*": ["../afi-core/*"],
+      "@afi-infra/*": ["../afi-infra/*"],
+      "@afi-ops/*": ["../afi-ops/*"]
+    }
+  }
+}
