@@ -1,4 +1,5 @@
 import { execSync } from 'child_process';
+import * as fs from 'fs';
 
 test('CLI greet command', () => {
   const output = execSync('node cli/afi-cli.ts greet Scarlett').toString();
@@ -6,8 +7,6 @@ test('CLI greet command', () => {
 });
 
 test('CLI validate-codex command', () => {
-  // Create a dummy codex file for test run
-  const fs = require('fs');
   const tmpFile = 'example-codex.json';
   fs.writeFileSync(tmpFile, '{}');
 
@@ -15,4 +14,19 @@ test('CLI validate-codex command', () => {
   expect(output).toContain('Validating example-codex.json');
 
   fs.unlinkSync(tmpFile);
+});
+
+test('CLI simulate-signal command', () => {
+  const output = execSync('node cli/afi-cli.ts simulate-signal').toString();
+  expect(output).toContain('Mock signal emitted');
+});
+
+test('CLI invoke-validator command', () => {
+  const output = execSync('node cli/afi-cli.ts invoke-validator').toString();
+  expect(output).toContain('PoIValidator invoked.');
+});
+
+test('CLI invoke-mentor command', () => {
+  const output = execSync('node cli/afi-cli.ts invoke-mentor').toString();
+  expect(output).toContain('MentorRegistry registered.');
 });
