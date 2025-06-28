@@ -1,0 +1,8 @@
+{
+  "bin": {
+    "afi-cli": "cli/afi-cli.ts"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
